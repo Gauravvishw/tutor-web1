@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+                name="viewport" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script
+                id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"surface-container-high": "#dce9ff", "surface-bright": "#f8f9ff", "tertiary-container": "#191c1e", "secondary": "#006a61", "outline": "#76777d", "primary-fixed": "#dae2fd", "on-primary": "#ffffff", "on-primary-fixed": "#131b2e", "on-error-container": "#93000a", "inverse-surface": "#213145", "on-background": "#0b1c30", "secondary-container": "#86f2e4", "tertiary": "#000000", "inverse-on-surface": "#eaf1ff", "outline-variant": "#c6c6cd", "primary": "#000000", "surface-dim": "#cbdbf5", "surface-container-low": "#eff4ff", "on-error": "#ffffff", "on-surface-variant": "#45464d", "surface-container-highest": "#d3e4fe", "surface-tint": "#565e74", "on-tertiary-fixed-variant": "#444749", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#3f465c", "on-tertiary": "#ffffff", "surface-container": "#e5eeff", "on-secondary-fixed-variant": "#005049", "surface-variant": "#d3e4fe", "on-tertiary-fixed": "#191c1e", "secondary-fixed": "#89f5e7", "on-primary-container": "#7c839b", "error-container": "#ffdad6", "primary-container": "#131b2e", "inverse-primary": "#bec6e0", "on-secondary-container": "#006f66", "error": "#ba1a1a", "primary-fixed-dim": "#bec6e0", "surface-container-lowest": "#ffffff", "surface": "#f8f9ff", "on-surface": "#0b1c30", "on-secondary-fixed": "#00201d", "secondary-fixed-dim": "#6bd8cb", "on-tertiary-container": "#818486", "tertiary-fixed-dim": "#c4c7c9", "background": "#f8f9ff", "tertiary-fixed": "#e0e3e5"}, "borderRadius": {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"}, "spacing": {"container-max": "1280px", "margin-desktop": "40px", "stack-md": "16px", "unit": "8px", "gutter": "24px", "stack-lg": "32px", "stack-sm": "8px", "margin-mobile": "16px"}, "fontFamily": {"label-sm": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "display-lg": ["Inter"], "label-caps": ["Inter"], "display-lg-mobile": ["Inter"]}, "fontSize": {"label-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}], "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}], "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}], "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]}}}}</script>
+        <style>
+                @layer base {
+                        body {
+                                overscroll-behavior: none;
+                        }
+
+                        .pb-safe {
+                                padding-bottom: env(safe-area-inset-bottom, 0px);
+                        }
+
+                        .pt-safe {
+                                padding-top: env(safe-area-inset-top, 0px);
+                        }
+                }
+
+                .no-scrollbar::-webkit-scrollbar {
+                        display: none;
+                }
+        </style>
+</head>
+
+<body class="bg-background font-body-md text-on-background">
+        <header
+                class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe">
+                <div class="h-16 flex items-center justify-between px-margin-mobile">
+                        <div class="flex items-center gap-unit"><img alt="EduHire Logo"
+                                        class="h-8 w-auto object-contain"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtxcU5V558-ClFdgrZy9UeLxMf4aFUn3jjnN8RyiankfJLjC1O9niXK6EozNNuzZKShxX9F72VeSXwa0_u316sA3tS7JvZ9PDaAOUaOKMDE2FPl3TACRaDBifvf0OJW1F8PrspRDyOlXRJveymDrLI4xEsiHbfOdC-VjQnmyDKBlcUnDyrWlMyrsbaSP3FYPwlDaUieZS6Q1rqbHjhgm1vv4BIgCkWLxvY0ZgVs-ZeELhG6LEmGn_dZg" /><span
+                                        class="font-headline-md text-headline-md text-on-surface">EduHire</span></div>
+                        <div class="flex items-center gap-stack-sm"><span
+                                        class="font-label-sm text-label-sm text-on-surface-variant">Home</span>
+                                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                                                class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+                                </div>
+                        </div>
+                </div>
+        </header>
+        <main class="relative pt-16 bg-surface min-h-screen">
+                <div class="flex flex-col w-full bg-surface">
+                        <section
+                                class="relative px-margin-mobile py-stack-lg bg-surface-container-low flex flex-col items-center text-center overflow-hidden">
+                                <div
+                                        class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none">
+                                </div>
+                                <div
+                                        class="relative z-10 flex flex-col items-center gap-stack-md max-w-[600px] mx-auto w-full">
+                                        <span
+                                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high font-label-caps text-label-caps text-on-surface-variant shadow-sm border border-outline-variant/30">
+                                                <span
+                                                        class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+                                                Trusted by 500+ Schools
+                                        </span>
+                                        <h1 class="font-display-lg-mobile text-display-lg-mobile text-on-surface">Hire
+                                                Expert Teachers for Your Institution</h1>
+                                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-[400px]">
+                                                Connect with vetted educators ready to make an impact in your classrooms
+                                                today.</p>
+                                        <div
+                                                class="w-full mt-stack-md bg-surface rounded-xl shadow-md p-2 flex flex-col gap-2 relative z-20 border border-outline-variant/20">
+                                                <div
+                                                        class="flex items-center bg-surface-container-lowest rounded-lg px-3 py-2 border border-outline-variant focus-within:border-secondary focus-within:ring-2 focus-within:ring-secondary/20 transition-all">
+                                                        <span
+                                                                class="material-symbols-outlined text-outline">search</span>
+                                                        <input class="w-full bg-transparent border-none focus:outline-none px-2 font-body-md text-on-surface placeholder:text-outline"
+                                                                placeholder="Subject (e.g., Mathematics)" type="text" />
+                                                </div>
+                                                <div
+                                                        class="flex items-center bg-surface-container-lowest rounded-lg px-3 py-2 border border-outline-variant focus-within:border-secondary focus-within:ring-2 focus-within:ring-secondary/20 transition-all">
+                                                        <span
+                                                                class="material-symbols-outlined text-outline">location_on</span>
+                                                        <input class="w-full bg-transparent border-none focus:outline-none px-2 font-body-md text-on-surface placeholder:text-outline"
+                                                                placeholder="Location or Zip Code" type="text" />
+                                                </div>
+                                                <button
+                                                        class="w-full bg-secondary hover:bg-secondary/90 text-on-secondary font-label-sm text-label-sm py-3 rounded-lg shadow-sm transition-colors mt-1">
+                                                        Search Teachers
+                                                </button>
+                                        </div>
+                                </div>
+                        </section>
+                        <section class="px-margin-mobile py-stack-lg bg-surface">
+                                <div class="flex flex-col gap-stack-md text-center mb-stack-lg">
+                                        <h2 class="font-headline-md text-headline-md text-on-surface">Why Choose EduHire
+                                        </h2>
+                                        <p class="font-body-md text-body-md text-on-surface-variant">Streamline your
+                                                recruitment with our specialized platform.</p>
+                                </div>
+                                <div class="grid grid-cols-1 gap-stack-md">
+                                        <div
+                                                class="bg-surface-container-lowest p-stack-md rounded-xl shadow-sm border border-outline-variant/30 flex items-start gap-4">
+                                                <div
+                                                        class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+                                                        <span
+                                                                class="material-symbols-outlined text-on-primary-fixed">school</span>
+                                                </div>
+                                                <div class="flex flex-col gap-1">
+                                                        <h3
+                                                                class="font-label-sm text-label-sm font-semibold text-on-surface">
+                                                                Vetted Professionals</h3>
+                                                        <p class="font-body-md text-body-md text-on-surface-variant">
+                                                                Every candidate undergoes rigorous credential and
+                                                                background checks.</p>
+                                                </div>
+                                        </div>
+                                        <div
+                                                class="bg-surface-container-lowest p-stack-md rounded-xl shadow-sm border border-outline-variant/30 flex items-start gap-4">
+                                                <div
+                                                        class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+                                                        <span
+                                                                class="material-symbols-outlined text-on-secondary-container">bolt</span>
+                                                </div>
+                                                <div class="flex flex-col gap-1">
+                                                        <h3
+                                                                class="font-label-sm text-label-sm font-semibold text-on-surface">
+                                                                Quick Hiring</h3>
+                                                        <p class="font-body-md text-body-md text-on-surface-variant">
+                                                                Reduce time-to-hire by connecting directly with active
+                                                                job seekers.</p>
+                                                </div>
+                                        </div>
+                                        <div
+                                                class="bg-surface-container-lowest p-stack-md rounded-xl shadow-sm border border-outline-variant/30 flex items-start gap-4">
+                                                <div
+                                                        class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center shrink-0">
+                                                        <span
+                                                                class="material-symbols-outlined text-on-surface-variant">payments</span>
+                                                </div>
+                                                <div class="flex flex-col gap-1">
+                                                        <h3
+                                                                class="font-label-sm text-label-sm font-semibold text-on-surface">
+                                                                Competitive Rates</h3>
+                                                        <p class="font-body-md text-body-md text-on-surface-variant">
+                                                                Transparent pricing tailored to school districts of all
+                                                                sizes.</p>
+                                                </div>
+                                        </div>
+                                </div>
+                        </section>
+                        <section class="py-stack-lg bg-surface-container-low overflow-hidden">
+                                <div class="px-margin-mobile flex justify-between items-end mb-stack-md">
+                                        <div class="flex flex-col gap-1">
+                                                <h2 class="font-headline-md text-headline-md text-on-surface">Featured
+                                                        Teachers</h2>
+                                                <p class="font-body-md text-body-md text-on-surface-variant">Top-rated
+                                                        educators available now.</p>
+                                        </div>
+                                        <button
+                                                class="text-secondary font-label-sm text-label-sm flex items-center gap-1 hover:underline">
+                                                View All <span
+                                                        class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                        </button>
+                                </div>
+                                <div
+                                        class="flex overflow-x-auto snap-x snap-mandatory gap-stack-md px-margin-mobile pb-4 no-scrollbar">
+                                        <div
+                                                class="snap-start shrink-0 w-[280px] bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/30 p-stack-md flex flex-col gap-stack-md relative overflow-hidden group">
+                                                <div class="flex items-start gap-3">
+                                                        <div
+                                                                class="w-14 h-14 rounded-full overflow-hidden border-2 border-surface-container-highest shrink-0">
+                                                                <img class="w-full h-full object-cover"
+                                                                        data-alt="Professional headshot of a middle-aged female teacher with a warm smile, wearing a blazer, set against a blurred classroom background. Clean, academic lighting."
+                                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8OLv_3eP1mIMClCc_uct9O6C-mJEgg-qkSgcfioHqfK3an2Yb5lathKar4XURVeSuElzZT5bUJPCcyYRmd5c2ayJKCi30hGGLPPbxTJHsF_ksMUWIvPbF374pemY67d9KsPlljmXSnMRSTQmCHA2qE2GKR3AU6u0aUSBkEJCAod80ufm8C0rQCGfzt6p6hksmS7Cr8ny4fD0Biv38e_1Um_wroUSH5xhNWSM-ShVpdv0X9S-xn6f1JQ" />
+                                                        </div>
+                                                        <div class="flex flex-col">
+                                                                <h3
+                                                                        class="font-label-sm text-label-sm font-semibold text-on-surface">
+                                                                        Sarah Jenkins</h3>
+                                                                <p
+                                                                        class="font-body-md text-body-md text-on-surface-variant text-sm">
+                                                                        High School Science</p>
+                                                                <div class="flex items-center gap-1 mt-1">
+                                                                        <span class="material-symbols-outlined text-[14px] text-secondary"
+                                                                                style="font-variation-settings: 'FILL' 1;">star</span>
+                                                                        <span
+                                                                                class="font-label-caps text-label-caps text-on-surface-variant">4.9
+                                                                                (12 reviews)</span>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="flex flex-wrap gap-2">
+                                                        <span
+                                                                class="px-2 py-1 bg-surface-container-high rounded text-xs font-label-sm text-on-surface-variant">Biology</span>
+                                                        <span
+                                                                class="px-2 py-1 bg-surface-container-high rounded text-xs font-label-sm text-on-surface-variant">Chemistry</span>
+                                                        <span
+                                                                class="px-2 py-1 bg-surface-container-high rounded text-xs font-label-sm text-on-surface-variant">AP
+                                                                Certified</span>
+                                                </div>
+                                        </div>
+                                        <div
+                                                class="snap-start shrink-0 w-[280px] bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/30 p-stack-md flex flex-col gap-stack-md relative overflow-hidden">
+                                                <div class="flex items-start gap-3">
+                                                        <div
+                                                                class="w-14 h-14 rounded-full overflow-hidden border-2 border-surface-container-highest shrink-0">
+                                                                <img class="w-full h-full object-cover"
+                                                                        data-alt="Professional headshot of a young male elementary teacher wearing a casual button-down shirt, friendly expression, solid light blue background. Clean corporate portrait style."
+                                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJGeWQyos7DZNVtxw2faVnKXk2U1nF-sX2RbmrmWSfIriyEtmDhvXCN5YVVrTtXfvmSesapN9hNxGU_fkmQq3c83sgDFkp_EO8q2RQa3ALlusYUBkzSvkH7eAGKvTAnr9B9RbEsZwzPrUJ9kKtacTZeN6gPHwDMDrJbmKfIRqoalYtqVfma9EH60nt3zR3acyybynl9ARRleN3YJ47PAoDZFD7M-VgUoC65gL59rDQJGQClYC-0SVcoA" />
+                                                        </div>
+                                                        <div class="flex flex-col">
+                                                                <h3
+                                                                        class="font-label-sm text-label-sm font-semibold text-on-surface">
+                                                                        David Chen</h3>
+                                                                <p
+                                                                        class="font-body-md text-body-md text-on-surface-variant text-sm">
+                                                                        Elementary Ed (K-5)</p>
+                                                                <div class="flex items-center gap-1 mt-1">
+                                                                        <span class="material-symbols-outlined text-[14px] text-secondary"
+                                                                                style="font-variation-settings: 'FILL' 1;">star</span>
+                                                                        <span
+                                                                                class="font-label-caps text-label-caps text-on-surface-variant">5.0
+                                                                                (8 reviews)</span>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="flex flex-wrap gap-2">
+                                                        <span
+                                                                class="px-2 py-1 bg-surface-container-high rounded text-xs font-label-sm text-on-surface-variant">Bilingual
+                                                                (Sp)</span>
+                                                        <span
+                                                                class="px-2 py-1 bg-surface-container-high rounded text-xs font-label-sm text-on-surface-variant">Special
+                                                                Ed</span>
+                                                </div>
+                                        </div>
+                                </div>
+                        </section>
+                        <section class="px-margin-mobile py-stack-lg bg-surface">
+                                <div
+                                        class="bg-primary-container rounded-2xl p-stack-lg flex flex-col items-center text-center gap-stack-md shadow-md relative overflow-hidden">
+                                        <div
+                                                class="absolute -right-10 -top-10 w-32 h-32 bg-primary/20 rounded-full blur-2xl">
+                                        </div>
+                                        <div
+                                                class="absolute -left-10 -bottom-10 w-24 h-24 bg-secondary/20 rounded-full blur-xl">
+                                        </div>
+                                        <span class="material-symbols-outlined text-[48px] text-on-primary-container z-10"
+                                                style="font-variation-settings: 'FILL' 1;">campaign</span>
+                                        <div class="flex flex-col gap-2 z-10">
+                                                <h2 class="font-headline-md text-headline-md text-on-primary-container">
+                                                        Need to fill a position fast?</h2>
+                                                <p
+                                                        class="font-body-md text-body-md text-on-primary-container/80 max-w-[300px]">
+                                                        Post a job and let qualified candidates come to you.</p>
+                                        </div>
+                                        <button
+                                                class="w-full sm:w-auto bg-on-primary-container hover:bg-on-primary-container/90 text-primary-container font-label-sm text-label-sm py-3 px-6 rounded-lg shadow-sm transition-colors mt-2 z-10 font-semibold">
+                                                Post a Job Now
+                                        </button>
+                                </div>
+                        </section>
+                </div>
+                <footer class="p-gutter mb-20 bg-surface-container-low flex flex-col gap-stack-md">
+                        <div class="flex flex-wrap gap-stack-md justify-between items-center">
+                                <p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 EduHire. All
+                                        rights reserved.</p>
+                                <div class="flex gap-stack-md"><a
+                                                class="font-label-sm text-label-sm text-secondary hover:underline transition-colors"
+                                                href="#">Privacy Policy</a><a
+                                                class="font-label-sm text-label-sm text-secondary hover:underline transition-colors"
+                                                href="#">Terms of Service</a></div>
+                        </div>
+                </footer>
+        </main>
+        <nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/80 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]"
+                data-active-classes="text-secondary font-semibold">
+                <div class="h-16 flex justify-around items-center px-unit"><a aria-current="page"
+                                class="flex flex-col items-center justify-center gap-1 transition-colors min-w-[44px] min-h-[44px] text-secondary font-semibold"
+                                data-path="home" href="#"><span class="material-symbols-outlined">home</span><span
+                                        class="font-label-caps text-label-caps">Home</span></a><a
+                                class="flex flex-col items-center justify-center gap-1 text-on-surface-variant transition-colors min-w-[44px] min-h-[44px]"
+                                data-path="browse-teachers" href="#"><span
+                                        class="material-symbols-outlined">person_search</span><span
+                                        class="font-label-caps text-label-caps">Browse</span></a><a
+                                class="flex flex-col items-center justify-center gap-1 text-on-surface-variant transition-colors min-w-[44px] min-h-[44px]"
+                                data-path="post-a-job" href="#"><span
+                                        class="material-symbols-outlined">add_circle</span><span
+                                        class="font-label-caps text-label-caps">Post Job</span></a><a
+                                class="flex flex-col items-center justify-center gap-1 text-on-surface-variant transition-colors min-w-[44px] min-h-[44px]"
+                                data-path="how-it-works" href="#"><span
+                                        class="material-symbols-outlined">help</span><span
+                                        class="font-label-caps text-label-caps">How</span></a></div>
+        </nav>
+</body>
+
+</html>
